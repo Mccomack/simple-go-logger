@@ -43,7 +43,7 @@ func New(name string) Logger {
 		Log: func(logType string, log ...string) {
 			nowTime := getTimeStr()
 
-			Log := fmt.Sprintf("[%s] [%s/%s]: %s\n", nowTime, name, logType, strings.Join(log, " "))
+			Log := fmt.Sprintf("[%s] [%s/%s]: %s", nowTime, name, logType, strings.Join(log, " "))
 
 			Logs[len(Logs)] = Log
 
